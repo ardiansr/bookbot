@@ -16,12 +16,8 @@ def dict_to_sorted_desc_list(dict):
     dict_list = []
     for key in dict:
         dict_list.append({"char": key, "num": dict[key]})
-    dict_list.sort(reverse=True, key=sort_list_values)
+    dict_list.sort(reverse=True, key=lambda dict: dict["num"])
     return dict_list
-
-
-def sort_list_values(list):
-    return list["num"]
 
 
 def get_chars_dict(text):
